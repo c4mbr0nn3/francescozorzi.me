@@ -7,7 +7,7 @@ and [many.link](https://www.google.com). LittleLink was built using [Skeleton](h
 
 ![Themes](https://cdn.cottle.cloud/littlelink/themes.png)
 
-LittleLink has more than 20 company button styles you can use and we'll be throwing more in soon. You'll also find a light and dark theme ready to go. Not a fan of the colors? Update `skeleton-light.css` or `skeleton-dark.css` to the HEX values of your choosing. 
+LittleLink has more than 20 company button styles you can use and we'll be throwing more in soon. You'll also find a light and dark theme ready to go. Not a fan of the colors? Update `skeleton-light.css` or `skeleton-dark.css` to the HEX values of your choosing.
 
 ![Performance](https://cdn.cottle.cloud/littlelink/performance.png)
 
@@ -23,4 +23,4 @@ No need for gulp, npm, or anything else to make LittleLink work—it uses the ba
 
 Duplicate the [LittleLink Template on Figma Community](https://www.figma.com/community/file/846568099968305613) to help plan out and design your LittleLink page.
 
-Check out [LittleLink Admin](https://github.com/khashayarzavosh/admin-littlelink) by [Khashayar Zavosh](https://github.com/khashayarzavosh) which lets you host your own admin portal to manage LittleLink! 
+Check out [LittleLink Admin](https://github.com/khashayarzavosh/admin-littlelink) by [Khashayar Zavosh](https://github.com/khashayarzavosh) which lets you host your own admin portal to manage LittleLink!
