@@ -364,7 +364,3 @@ button:hover,
 .button.button-wordpress:focus {
   filter: brightness(90%);
 }
-
-.footer {
-  font-size: small;
-}
