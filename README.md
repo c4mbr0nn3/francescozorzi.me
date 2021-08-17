@@ -1,6 +1,8 @@
 # My LittleLink
 
-This is my personal fork of the great [LittleLink](https://github.com/sethcottle/littlelink) project. :star: It has some tweak to css and new buttons available, which I will eventually propose to the original project.
+This is my personal fork of the great [LittleLink](https://github.com/sethcottle/littlelink) project. :star: 
+
+It has some tweak to css and new buttons available, which I will eventually propose to the original project, and prettier config for properly code indentation.
 
 I brought it to GitLab just for personal taste, but all the credit for the LittleLink boiler plate goes to [Seth Cottle](https://github.com/sethcottle). :+1:
 
