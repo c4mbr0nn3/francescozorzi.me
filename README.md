@@ -4,8 +4,6 @@ This is my personal fork of the great [LittleLink](https://github.com/sethcottle
 
 It has some tweak to css and new buttons available, which I will eventually propose to the original project, and prettier config for properly code indentation.
 
-I brought it to GitLab just for personal taste, but all the credit for the LittleLink boiler plate goes to [Seth Cottle](https://github.com/sethcottle). :+1:
-
 The project is deployed using [Netlify](https://www.netlify.com/) infrastructure which is very similar to the [Vercel](https://vercel.com/) solution recommended by the author. Again, it's just a matter of personal preference.
 
 ## What is LittleLink?
