@@ -1,10 +1,10 @@
 # My LittleLink
 
-This is my personal fork of the great [LittleLink](https://github.com/sethcottle/littlelink) project. :star: 
+This is my personal fork of the great [LittleLink](https://github.com/sethcottle/littlelink) project.
 
-It has some tweak to css and new buttons available, which I will eventually propose to the original project, and prettier config for properly code indentation.
+It has some tweaks to the CSS, new buttons available and a prettier config for proper code indentation. I will eventually propose these changes to the original project.
 
-The project is deployed using [Netlify](https://www.netlify.com/) infrastructure which is very similar to the [Vercel](https://vercel.com/) solution recommended by the author. Again, it's just a matter of personal preference.
+The project is deployed using [Netlify](https://www.netlify.com/) infrastructure, which is very similar to the [Vercel](https://vercel.com/) solution recommended by the author. Again, it's just a matter of personal preference.
 
 ## What is LittleLink?
 
