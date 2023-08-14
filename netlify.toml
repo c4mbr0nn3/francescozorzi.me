@@ -1,0 +1,10 @@
+[[headers]]
+for = "/*"
+
+[headers.values]
+Referrer-Policy = "strict-origin-when-cross-origin"
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+Permissions-Policy = "accelerometer=(self), autoplay=(self), camera=(self), cross-origin-isolated=(self), display-capture=(self), document-domain=(self), encrypted-media=(self), fullscreen=(self), geolocation=(self), gyroscope=(self), keyboard-map=(self), magnetometer=(self), microphone=(self), midi=(self), payment=(self), picture-in-picture=(self), publickey-credentials-get=(self), screen-wake-lock=(self), sync-xhr=(self), usb=(self), xr-spatial-tracking=(self)"
+Content-Security-Policy = "base-uri 'self'; default-src 'self'; style-src 'self' https://fonts.googleapis.com; script-src 'self'; img-src 'self'; media-src 'none'; font-src https://fonts.gstatic.com; connect-src 'none'; frame-src 'none'; form-action 'none';"
