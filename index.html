@@ -38,15 +38,15 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="column" style="margin-top: 10%">
+      <div class="column mt-10p">
 
-        <!-- 
+        <!--
 
           ## Getting Started with LittleLink
 
           This page has been built with every pre-designed button available in LittleLink by default. You can rearrange and delete as needed.
 
-          You can add your own brand or others brands you may need in the `css/brands.css` file. 
+          You can add your own brand or others brands you may need in the `css/brands.css` file.
 
           Edit the "Your Image Here" section to add your own personal branding, like a picture of yourself or your brand logo!
 
@@ -63,13 +63,17 @@
         <h1>Francesco Zorzi</h1>
 
         <!-- Short Bio -->
-        <div style="display: flex; justify-content: center;"><p style="width: 65%;">Hi! I am a nerd based in Milan with passion for self-hosting, coding, personal-finance and photography.</p></div>
-        
+        <div class="bio">
+          <p class="w-65p">
+            Hi! I am a nerd based in Milan with passion for self-hosting, coding, personal-finance and photography.
+          </p>
+        </div>
+
 
         <!--
 
           ## Breaking down <a> attributes:
-          
+
           1.) class="button button-default" | The first "button" here is telling this <a> tag that it should make this element a button and applies the default styling in `css/brands.css`.
           The second portion, button-default, is declaring the specific brand style you would like to apply. Here we're applying the "default" style and color.
           If you want to make this button to use the brand colors for Discord, just change "button-default" to "button-discord". Brands are found in `css/brands.css`. You can always edit & add your own there.
@@ -82,48 +86,71 @@
           This is especially useful when opening untrusted links. https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/noopener
 
           ## Breaking down the <img> attributes:
-          
+
           1.) class="icon" | This class is telling the <img> tag that it should use the styling for icons found in `css/brands.css`.
 
           2.) src="icons/[icon_name].svg" | This defines the icon you would like to display from the icons/ folder. For example, you can change this to src="icons/discord.svg" to use the Discord icon.
           Add your own 24x24 icons to the "icons" folder to reference them. We recommend providing a SVG.
 
-          3.) alt="Example Logo" | This alt attribute helps provides alternate text for an image, this can assist users who use screen readers. 
+          3.) alt="Example Logo" | This alt attribute helps provides alternate text for an image, this can assist users who use screen readers.
 
         -->
 
         <!-- LinkedIn -->
-        <a class="button button-soundcloud" href="https://cialtr.one/" target="_blank" rel="noopener"><img class="icon" src="icons/blog.svg" alt="Blog Logo">Personal Blog</a>
+        <a class="button button-soundcloud" href="https://cialtr.one/" target="_blank" rel="noopener">
+          <img class="icon" src="icons/blog.svg" alt="Blog Logo">
+          Personal Blog
+        </a>
         <br>
 
         <!-- LinkedIn -->
-        <a class="button button-linkedin" href="https://www.linkedin.com/in/francesco-zorzi/" target="_blank" rel="noopener"><img class="icon" src="icons/linkedin.svg" alt="LinkedIn Logo">LinkedIn</a>
+        <a class="button button-linkedin" href="https://www.linkedin.com/in/francesco-zorzi/" target="_blank" rel="noopener">
+          <img class="icon" src="icons/linkedin.svg" alt="LinkedIn Logo">
+          LinkedIn
+        </a>
         <br>
-      
+
         <!-- Github -->
-        <a class="button button-github" href="https://github.com/c4mbr0nn3" target="_blank" rel="noopener"><img class="icon" src="icons/github.svg" alt="Github Logo">Github</a>
+        <a class="button button-github" href="https://github.com/c4mbr0nn3" target="_blank" rel="noopener">
+          <img class="icon" src="icons/github.svg" alt="Github Logo">
+          Github
+        </a>
         <br>
 
         <!-- Twitter -->
-        <a class="button button-twitter" href="https://twitter.com/j1mb0j1mm0" target="_blank" rel="noopener"><img class="icon" src="icons/twitter.svg" alt="Twitter Logo">Twitter</a>
+        <a class="button button-twitter" href="https://twitter.com/j1mb0j1mm0" target="_blank" rel="noopener">
+          <img class="icon" src="icons/twitter.svg" alt="Twitter Logo">
+          Twitter
+        </a>
         <br>
 
         <!-- Instagram -->
-        <a class="button button-instagram" href="https://www.instagram.com/fr4nk13/" target="_blank" rel="noopener"><img class="icon" src="icons/instagram.svg" alt="Instagram Logo">Instagram</a>
+        <a class="button button-instagram" href="https://www.instagram.com/fr4nk13/" target="_blank" rel="noopener">
+          <img class="icon" src="icons/instagram.svg" alt="Instagram Logo">
+          Instagram
+        </a>
         <br>
-          
+
         <!-- Reddit -->
-        <a class="button button-reddit" href="https://www.reddit.com/user/j1mb0j1mm0" target="_blank" rel="noopener"><img class="icon" src="icons/reddit.svg" alt="Reddit Logo">Reddit</a>
+        <a class="button button-reddit" href="https://www.reddit.com/user/j1mb0j1mm0" target="_blank" rel="noopener">
+          <img class="icon" src="icons/reddit.svg" alt="Reddit Logo">
+          Reddit
+        </a>
         <br>
 
         <!-- Goodreads -->
-        <a class="button button-goodreads" href="https://www.goodreads.com/user/show/146141871-francesco" target="_blank" rel="noopener"><img class="icon" src="icons/goodreads.svg" alt="Goodreads Logo">Goodreads</a>
+        <a class="button button-goodreads" href="https://www.goodreads.com/user/show/146141871-francesco" target="_blank" rel="noopener">
+          <img class="icon" src="icons/goodreads.svg" alt="Goodreads Logo">
+          Goodreads
+        </a>
         <br>
 
         <br>
         <br>
-        <p class="footer">Build your own by forking <a href="https://littlelink.io" target="_blank" rel="noopener">LittleLink</a>.</p>
-          
+        <p class="footer">
+          Build your own by forking <a href="https://littlelink.io" target="_blank" rel="noopener">LittleLink</a>.
+        </p>
+
       </div>
     </div>
   </div>

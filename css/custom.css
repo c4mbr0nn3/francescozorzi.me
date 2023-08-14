@@ -9,3 +9,16 @@
     border-width: 4px;
     background-color: white;
 }
+
+.mt-10p {
+    margin-top: 10%;
+}
+
+.w-65p {
+    width: 65%;
+}
+
+.bio {
+    display: flex;
+    justify-content: center;
+}
