@@ -1,15 +1,17 @@
 ---
 import "../styles/global.css";
+import { Icon } from "astro-icon/components";
 
 const personalInfo = {
   name: "francesco.zorzi",
   host: "me",
   bio: "a passionate developer building for the web",
   links: [
-    { name: "resume", url: "#" },
-    { name: "blog", url: "#" },
-    { name: "github", url: "#" },
-    { name: "gitlab", url: "#" },
+    { name: "resume.pdf", icon: "carbon:document-pdf", url: "#" },
+    { name: "linkedin", icon: "carbon:logo-linkedin", url: "#" },
+    { name: "blog", icon: "carbon:blog", url: "#" },
+    { name: "github", icon: "carbon:logo-github", url: "#" },
+    { name: "gitlab", icon: "carbon:logo-gitlab", url: "#" },
   ],
 };
 
@@ -63,7 +65,7 @@ const seo = {
     <main
   >
     <div
-      class="border-tokyo-border mx-4 w-full max-w-5/6 rounded-lg border bg-black/50 p-6 md:mx-auto md:p-12 lg:max-w-4xl"
+      class="border-tokyo-border mx-4 w-full max-w-5/6 rounded-lg border bg-black/50 p-5 md:mx-auto md:p-12 lg:max-w-4xl"
     >
       <div class="flex flex-wrap items-center gap-2">
         <span class="text-tokyo-user">{personalInfo.name}</span><span
@@ -99,6 +101,10 @@ const seo = {
                   class="text-tokyo-fg hover:bg-tokyo-fg hover:text-tokyo-bg m-[-0.2rem] inline-block rounded-md px-1 py-0.5 pr-2 no-underline transition-all duration-200"
                 >
                   <span class="before:mr-[1ch] before:opacity-60 before:content-['-rw-r--r--']">
+                    <Icon
+                      name={link.icon}
+                      class="mr-1 inline-block opacity-80"
+                    />
                     {link.name}
                   </span>
                 </a>
