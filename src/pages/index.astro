@@ -1,35 +1,55 @@
 ---
 import "../styles/global.css";
 import { Icon } from "astro-icon/components";
+import TerminalPrompt from "../components/TerminalPrompt.astro";
 
 const personalInfo = {
   name: "francesco.zorzi",
   host: "me",
   bio: "software engineer & team lead • .net enthusiast • making things work for 5+ years",
   links: [
-    { name: "resume.pdf", icon: "carbon:document-pdf", url: "https://resume.francescozorzi.me" },
-    { name: "linkedin", icon: "carbon:logo-linkedin", url: "https://www.linkedin.com/in/francesco-zorzi/" },
+    {
+      name: "resume.pdf",
+      icon: "carbon:document-pdf",
+      url: "https://resume.francescozorzi.me",
+    },
+    {
+      name: "linkedin",
+      icon: "carbon:logo-linkedin",
+      url: "https://www.linkedin.com/in/francesco-zorzi/",
+    },
     { name: "blog", icon: "carbon:blog", url: "https://cialtr.one/" },
-    { name: "github", icon: "carbon:logo-github", url: "https://github.com/c4mbr0nn3" },
-    { name: "gitlab", icon: "carbon:logo-gitlab", url: "https://gitlab.com/j1mm0" },
+    {
+      name: "github",
+      icon: "carbon:logo-github",
+      url: "https://github.com/c4mbr0nn3",
+    },
+    {
+      name: "gitlab",
+      icon: "carbon:logo-gitlab",
+      url: "https://gitlab.com/j1mm0",
+    },
   ],
 };
 
 const seo = {
   title: "Francesco Zorzi | Software Engineer",
-  description: "Software Engineer specializing in .NET, C#, and full-stack development. 5+ years leading engineering teams and building scalable web applications. Portfolio, resume, and projects.",
+  description:
+    "Software Engineer specializing in .NET, C#, and full-stack development. 5+ years leading engineering teams and building scalable web applications. Portfolio, resume, and projects.",
   canonical: "https://francescozorzi.me",
   og: {
     type: "website",
     title: "Francesco Zorzi | Software Engineer",
-    description: "Software Engineer with 5+ years building .NET applications and leading development teams.",
+    description:
+      "Software Engineer with 5+ years building .NET applications and leading development teams.",
     url: "https://francescozorzi.me",
     image: "/og-image.png",
   },
   twitter: {
     card: "summary_large_image",
     title: "Francesco Zorzi | Software Engineer",
-    description: "Software Engineer with 5+ years building .NET applications and leading development teams.",
+    description:
+      "Software Engineer with 5+ years building .NET applications and leading development teams.",
     image: "/og-image.png",
   },
 };
@@ -67,29 +87,20 @@ const seo = {
     <div
       class="border-tokyo-border mx-4 w-full max-w-5/6 rounded-lg border bg-black/50 p-5 md:mx-auto md:p-12 lg:max-w-4xl"
     >
-      <div class="flex flex-wrap items-center gap-2">
-        <span class="text-tokyo-user">{personalInfo.name}</span><span
-          class="text-tokyo-host">@{personalInfo.host}</span
-        >
-        <span>:</span>
-        <span>~</span>
-        <span>$</span>
-        <span class="bg-tokyo-fg animate-blink inline-block h-[1.2em] w-[0.8ch]"
-        ></span>
-      </div>
+      <TerminalPrompt
+        name={personalInfo.name}
+        host={personalInfo.host}
+        showCursor={true}
+      />
       <div class="my-4 pl-[2ch]">
         <p>{personalInfo.bio}</p>
       </div>
       <div class="mt-8">
-        <div class="flex flex-wrap items-center gap-2">
-          <span class="text-tokyo-user">{personalInfo.name}</span><span
-            class="text-tokyo-host">@{personalInfo.host}</span
-          >
-          <span>:</span>
-          <span>~</span>
-          <span>$</span>
-          <span>ls -l</span>
-        </div>
+        <TerminalPrompt
+          name={personalInfo.name}
+          host={personalInfo.host}
+          command="ls -l"
+        />
         <ul class="mt-4 ml-[2ch] flex list-none flex-col gap-2 p-0 md:gap-4">
           {
             personalInfo.links.map((link) => (

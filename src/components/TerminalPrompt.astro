@@ -1,0 +1,24 @@
+---
+interface Props {
+  name: string;
+  host: string;
+  command?: string;
+  showCursor?: boolean;
+}
+
+const { name, host, command, showCursor = false } = Astro.props;
+---
+
+<div class="flex flex-wrap items-center gap-1">
+  <span class="text-tokyo-user">{name}</span>
+  <span class="text-tokyo-host">@{host}</span>
+  <span>:</span>
+  <span>~</span>
+  <span>$</span>
+  {command && <span>{command}</span>}
+  {
+    showCursor && (
+      <span class="bg-tokyo-fg animate-blink inline-block h-[1.2em] w-[0.8ch]" />
+    )
+  }
+</div>
