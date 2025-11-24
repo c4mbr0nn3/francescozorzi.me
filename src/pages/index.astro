@@ -6,7 +6,11 @@ import TerminalPrompt from "../components/TerminalPrompt.astro";
 const personalInfo = {
   name: "francesco.zorzi",
   host: "me",
-  bio: "software engineer & team lead • .net enthusiast • making things work for 5+ years",
+  bio: [
+    "software engineer & team lead",
+    ".net enthusiast",
+    "making things work for 5+ years",
+  ],
   links: [
     {
       name: "resume.pdf",
@@ -92,8 +96,19 @@ const seo = {
         host={personalInfo.host}
         showCursor={true}
       />
-      <div class="my-4 pl-[2ch]">
-        <p>{personalInfo.bio}</p>
+      <div class="my-4 sm:pl-[2ch]">
+        <div class="flex flex-col gap-1 md:flex-row md:flex-wrap md:gap-0">
+          {
+            personalInfo.bio.map((item, index) => (
+              <>
+                <span>{item}</span>
+                {index < personalInfo.bio.length - 1 && (
+                  <span class="hidden md:mx-2 md:inline">•</span>
+                )}
+              </>
+            ))
+          }
+        </div>
       </div>
       <div class="mt-8">
         <TerminalPrompt
@@ -101,7 +116,7 @@ const seo = {
           host={personalInfo.host}
           command="ls -l"
         />
-        <ul class="mt-4 ml-[2ch] flex list-none flex-col gap-2 p-0 md:gap-4">
+        <ul class="mt-4 flex list-none flex-col gap-2 p-0 sm:ml-[2ch] md:gap-4">
           {
             personalInfo.links.map((link) => (
               <li>
