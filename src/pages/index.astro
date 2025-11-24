@@ -89,7 +89,7 @@ const seo = {
     <main
   >
     <div
-      class="border-tokyo-border mx-4 w-full max-w-5/6 rounded-lg border bg-black/50 p-5 md:mx-auto md:p-12 lg:max-w-4xl"
+      class="border-tokyo-border relative mx-4 w-full max-w-5/6 rounded-lg border bg-black/50 p-5 md:mx-auto md:p-12 lg:max-w-4xl"
     >
       <TerminalPrompt
         name={personalInfo.name}
@@ -138,6 +138,11 @@ const seo = {
             ))
           }
         </ul>
+      </div>
+      <div
+        class="absolute right-3 bottom-3 opacity-30 transition-opacity duration-300 hover:opacity-60"
+      >
+        <Icon name="line-md:coffee-half-empty-twotone-loop" class="h-6 w-6" />
       </div>
     </div>
   </body>
