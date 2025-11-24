@@ -1,16 +1,112 @@
 ---
+import "../styles/global.css";
 
+const personalInfo = {
+  name: "francesco.zorzi",
+  host: "me",
+  bio: "a passionate developer building for the web",
+  links: [
+    { name: "resume", url: "#" },
+    { name: "blog", url: "#" },
+    { name: "github", url: "#" },
+    { name: "gitlab", url: "#" },
+  ],
+};
+
+const seo = {
+  title: "Francesco Zorzi | Developer",
+  description: `The personal landing page for ${personalInfo.name}, ${personalInfo.bio}.`,
+  canonical: "https://francescozorzi.me", // Replace with your actual domain
+  og: {
+    type: "website",
+    title: "Francesco Zorzi | Developer",
+    description: `The personal landing page for ${personalInfo.name}, ${personalInfo.bio}.`,
+    url: "https://francescozorzi.me", // Replace with your actual domain
+    image: "/og-image.png", // Create a 1200x630px image and place it in /public
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Francesco Zorzi | Developer",
+    description: `The personal landing page for ${personalInfo.name}, ${personalInfo.bio}.`,
+    image: "/og-image.png", // Create a 1200x630px image and place it in /public
+  },
+};
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Meta Tags -->
+    <title>{seo.title}</title>
+    <meta name="description" content={seo.description} />
+    <link rel="canonical" href={seo.canonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={seo.og.type} />
+    <meta property="og:title" content={seo.og.title} />
+    <meta property="og:description" content={seo.og.description} />
+    <meta property="og:url" content={seo.og.url} />
+    <meta property="og:image" content={seo.og.image} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content={seo.twitter.card} />
+    <meta name="twitter:title" content={seo.twitter.title} />
+    <meta name="twitter:description" content={seo.twitter.description} />
+    <meta name="twitter:image" content={seo.twitter.image} />
+  </head>
+  <body
+    class="bg-tokyo-bg text-tokyo-fg flex min-h-screen items-center justify-center font-mono"
+    <main
+  >
+    <div
+      class="border-tokyo-border mx-4 w-full max-w-5/6 rounded-lg border bg-black/50 p-6 md:mx-auto md:p-12 lg:max-w-4xl"
+    >
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="text-tokyo-user">{personalInfo.name}</span><span
+          class="text-tokyo-host">@{personalInfo.host}</span
+        >
+        <span>:</span>
+        <span>~</span>
+        <span>$</span>
+        <span class="bg-tokyo-fg animate-blink inline-block h-[1.2em] w-[0.8ch]"
+        ></span>
+      </div>
+      <div class="my-4 pl-[2ch]">
+        <p>{personalInfo.bio}</p>
+      </div>
+      <div class="mt-8">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="text-tokyo-user">{personalInfo.name}</span><span
+            class="text-tokyo-host">@{personalInfo.host}</span
+          >
+          <span>:</span>
+          <span>~</span>
+          <span>$</span>
+          <span>ls -l</span>
+        </div>
+        <ul class="mt-4 ml-[2ch] flex list-none flex-col gap-2 p-0 md:gap-4">
+          {
+            personalInfo.links.map((link) => (
+              <li>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-tokyo-fg hover:bg-tokyo-fg hover:text-tokyo-bg m-[-0.2rem] inline-block rounded-md px-1 py-0.5 pr-2 no-underline transition-all duration-200"
+                >
+                  <span class="before:mr-[1ch] before:opacity-60 before:content-['-rw-r--r--']">
+                    {link.name}
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>

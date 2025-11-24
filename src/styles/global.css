@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tokyo-bg: #1a1b26;
+  --color-tokyo-fg: #c0caf5;
+  --color-tokyo-border: #414559;
+  --color-tokyo-user: #7aa2f7;
+  --color-tokyo-host: #bb9af7;
+
+  --animate-blink: blink 1s steps(1) infinite;
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+    0%,
+    100% {
+      opacity: 1;
+    }
+  }
+}
