@@ -84,3 +84,22 @@ To update personal information, modify the `personalInfo` and `seo` objects in `
 - Update `personalInfo.links` to add/remove social links
 - Each link requires: `name`, `icon` (Carbon icon name), and `url`
 - Update SEO metadata in the `seo` object for proper meta tags
+
+## Deployment & Security
+
+### Netlify Configuration
+
+The site is configured for Netlify deployment via `netlify.toml`:
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- **Security headers** configured for all routes:
+  - Content-Security-Policy (CSP)
+  - X-Content-Type-Options
+  - X-Frame-Options
+  - X-XSS-Protection
+  - Strict-Transport-Security (HSTS)
+  - Referrer-Policy
+  - Permissions-Policy
+
+If you need to adjust CSP policies (e.g., to allow external scripts or resources), modify the `Content-Security-Policy` in `netlify.toml`.
